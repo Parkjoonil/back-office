@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectsettingComponent } from './projectsetting.component';
+import { ShareidComponent } from './shareid.component';
 
 
 
 @NgModule({
   declarations: [
-    ProjectsettingComponent
+    ShareidComponent
   ],
   imports: [
     CommonModule
   ]
 })
-export class ProjectsettingModule { }
+export class ShareidModule { }

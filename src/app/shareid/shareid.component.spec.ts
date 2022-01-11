@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProjectsettingComponent } from './projectsetting.component';
+import { ShareidComponent } from './shareid.component';
 
-describe('ProjectsettingComponent', () => {
-  let component: ProjectsettingComponent;
-  let fixture: ComponentFixture<ProjectsettingComponent>;
+describe('ShareidComponent', () => {
+  let component: ShareidComponent;
+  let fixture: ComponentFixture<ShareidComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProjectsettingComponent ]
+      declarations: [ ShareidComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProjectsettingComponent);
+    fixture = TestBed.createComponent(ShareidComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

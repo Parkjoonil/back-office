@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProjectsettingComponent } from './projectsetting/projectsetting.component';
+import { ProjectComponent } from './project/project.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { ShareidComponent } from './shareid/shareid.component';
 import { StreamingComponent } from './streaming/streaming.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProjectsettingComponent
+    component: StreamingComponent
   },
   {
     path: 'streaming',
@@ -23,8 +24,12 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'projectsetting',
-    component: ProjectsettingComponent
+    path: 'project',
+    component: ProjectComponent
+  },
+  {
+    path: 'shareid',
+    component: ShareidComponent
   }
 ];
 

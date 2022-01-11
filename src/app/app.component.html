@@ -1,116 +1,116 @@
 <div class="flex h-screen w-full">
-  <div class="w-[270px] bg-accent px-6 py-4 text-white text-sm">
+  <div class="w-[270px] bg-accent px-6 py-4 text-white text-sm" *ngIf="menushow">
       <div class="h-[66px] flex items-center">
           <img src="assets/images/lepisode.png" alt="">
           <div class="ml-4 text-base">
             백오피스
           </div>
       </div>
-      <div class="h-[56px] flex justify-between items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] flex justify-between items-center cursor-pointer">
           <div class="flex justify-between items-center">
             <img src="assets/images/settings.png" alt="">
             <div class="ml-3">
               업무
             </div>
           </div>
-          <div>
+          <div (click)="setting1=!setting1">
             <img src="assets/images/arrowdown_2.png" alt="">
           </div>
           
       </div>
-      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['projectsetting']">
+      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['project']" *ngIf="setting1">
           <img src="assets/images/dot.png" alt="">
           <div class="ml-[18px]">
               프로젝트 관리
           </div>
       </div>
-      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['schedule']">
+      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['shareid']" *ngIf="setting1">
           <img src="assets/images/dot.png" alt="">
           <div class="ml-[18px]">
               공유 아이디 관리
           </div>
       </div>
-      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']" *ngIf="setting1">
           <img src="assets/images/dot.png" alt="">
           <div class="ml-[18px]">
               공유 정보 관리
           </div>
       </div>
 
-      <div class="h-[56px] flex justify-between items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] flex justify-between items-center cursor-pointer">
           <div class="flex justify-between items-center">
             <img src="assets/images/settings.png" alt="">
-            <div class="ml-3">
+            <div class="ml-3" >
               업무
             </div>
           </div>
-          <div>
+          <div (click)="setting2=!setting2">
             <img src="assets/images/arrowdown_2.png" alt="">
           </div>
           
       </div>
-      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']" *ngIf="setting2">
           <img src="assets/images/dot.png" alt="">
           <div class="ml-[18px]">
               출석체크
           </div>
       </div>
-      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']" *ngIf="setting2">
           <img src="assets/images/dot.png" alt="">
           <div class="ml-[18px]">
               캘린더
           </div>
       </div>
-      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']" *ngIf="setting2">
           <img src="assets/images/dot.png" alt="">
           <div class="ml-[18px]">
               출석대장
           </div>
       </div>
-      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']" *ngIf="setting2">
           <img src="assets/images/dot.png" alt="">
           <div class="ml-[18px]">
               출석대장
           </div>
       </div>
 
-      <div class="h-[56px] flex justify-between items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] flex justify-between items-center cursor-pointer">
           <div class="flex justify-between items-center">
             <img src="assets/images/settings.png" alt="">
             <div class="ml-3">
               비용관리
             </div>
           </div>
-          <div>
+          <div (click)="setting3=!setting3">
             <img src="assets/images/arrowdown_2.png" alt="">
           </div>
           
       </div>
-      <div class="h-[56px] flex justify-between items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] flex justify-between items-center cursor-pointer">
           <div class="flex justify-between items-center">
             <img src="assets/images/settings.png" alt="">
             <div class="ml-3">
               인사관리
             </div>
           </div>
-          <div>
+          <div (click)="setting4=!setting4">
             <img src="assets/images/arrowdown_2.png" alt="">
           </div>
           
       </div>
-      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']" *ngIf="setting4">
           <img src="assets/images/dot.png" alt="">
           <div class="ml-[18px]">
               직원 관리
           </div>
       </div>
-      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']" *ngIf="setting4">
           <img src="assets/images/dot.png" alt="">
           <div class="ml-[18px]">
               팀 관리
           </div>
       </div>
-      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']">
+      <div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="['dashboard']" *ngIf="setting4">
           <img src="assets/images/dot.png" alt="">
           <div class="ml-[18px]">
               직급 관리
@@ -139,10 +139,10 @@
   </div>
   <div class="w-full">
       <div class="px-7 flex justify-between items-center h-[66px] border-b-[1px] border-gray-200">
-          <div>
+          <div (click)="menushow=!menushow" class="cursor-pointer">
               <img src="assets/images/menu.png" alt="">
           </div>
-          <div class="flex justify-between items-center">
+          <div class="flex justify-center items-center">
               <div>
                   <img src="assets/images/search.png" alt="">
               </div>
@@ -156,11 +156,27 @@
                   <img src="assets/images/avatar.png" alt="">
               </div>
               <div class="ml-3">
-                  Mana_ara
+                    Mana_ara
               </div>
-              <div class="ml-5">
-                  <img src="assets/images/arrowdown.png" alt="">
+              
+              <div class="space-y-6 flex items-start justify-center">
+                <div (click)="arrowdown=!arrowdown" class="ml-5 cursor-pointer">
+                    <img src="assets/images/arrowdown.png" alt="">
+                </div>
+                <div class="mr-12 absolute w-[120px] bg-gray-600 opacity-70 rounded-lg p-2 text-center flex justify-center items-center" *ngIf="arrowdown">
+                    <div class="text-sm text-white space-y-2">
+                        <div>
+                            비밀번호 변경
+                        </div>
+                        <div>
+                            로그아웃
+                        </div>
+                        
+                    </div>
+                </div>
               </div>
+              
+              
           </div>
       </div>
       <router-outlet></router-outlet>

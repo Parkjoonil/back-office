@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'front-end';
+  menushow: boolean = true;
+  arrowdown: boolean = false;
+  setting1: boolean = true;
+  setting2: boolean = true;
+  setting3: boolean = true;
+  setting4: boolean = true;
 }
