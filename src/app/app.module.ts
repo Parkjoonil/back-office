@@ -7,10 +7,14 @@ import { ProjectComponent } from './project/project.component';
 import { ProjectModule } from './project/project.module';
 import { StreamingComponent } from './streaming/streaming.component';
 import { StreamingModule } from './streaming/streaming.module';
+import { MenuComponent } from './menu/menu.component';
+import { MenuDetailComponent } from './menu/menu-detail/menu-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MenuComponent,
+    MenuDetailComponent,
   ],
   imports: [
     BrowserModule,

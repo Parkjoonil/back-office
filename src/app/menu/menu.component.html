@@ -1,0 +1,12 @@
+<div class="h-[56px] flex justify-between items-center cursor-pointer">
+    <div class="flex justify-between items-center">
+      <img [src]="'assets/images/' + icon + '.png'" alt="">
+      <div class="ml-3">
+        {{ name }}
+      </div>
+    </div>
+    <div (click)="isOpen = !isOpen">
+      <img src="assets/images/arrowdown_2.png" alt="">
+    </div>
+</div>
+<app-menu-detail [routeUrl]="'d'" [name]="'임시'"></app-menu-detail>

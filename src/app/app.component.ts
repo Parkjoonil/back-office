@@ -9,8 +9,8 @@ export class AppComponent {
   title = 'front-end';
   menushow: boolean = true;
   arrowdown: boolean = false;
-  setting1: boolean = true;
-  setting2: boolean = true;
-  setting3: boolean = true;
-  setting4: boolean = true;
+  setting1: boolean = false;
+  setting2: boolean = false;
+  setting3: boolean = false;
+  setting4: boolean = false;
 }
