@@ -1,4 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+
+interface Menu {
+  name: string;
+  icon: string;
+  details: MenuDetail[];
+}
+
+interface MenuDetail {
+  name: string;
+  url: string;
+}
 
 @Component({
   selector: 'app-menu',
@@ -8,11 +19,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   @Input()
-  name: string = '';
-  
-  @Input()
-  icon: string = '';
-
+  menu: Menu = {
+    name: '',
+    details: [
+      {
+        name: '',
+        url: ''
+      }
+    ],
+    icon: '',
+  };
 
   isOpen: boolean = false;
 

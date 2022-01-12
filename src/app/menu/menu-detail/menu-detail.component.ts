@@ -1,4 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+
+interface MenuDetail {
+  name: string,
+  url: string
+}
 
 @Component({
   selector: 'app-menu-detail',
@@ -7,13 +12,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MenuDetailComponent implements OnInit {
 
-  @Input('routeUrl')
-  routeUrl: string = '';
-  
-  @Input('name')
-  name: string = '';
-
-  isOpen: boolean = false;
+  @Input()
+  detail: MenuDetail = {
+    url: '',
+    name: '',
+  };
 
   constructor() { }
 

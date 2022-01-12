@@ -9,16 +9,22 @@ import { StreamingComponent } from './streaming/streaming.component';
 import { StreamingModule } from './streaming/streaming.module';
 import { MenuComponent } from './menu/menu.component';
 import { MenuDetailComponent } from './menu/menu-detail/menu-detail.component';
+import { ShareidModule } from './shareid/shareid.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     MenuDetailComponent,
+    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ShareidModule,
+    ProjectModule
     
 
   ],
