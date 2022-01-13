@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShareinfoCardComponent } from './shareinfo-card.component';
+import { ShareinfoListComponent } from './shareinfo-list.component';
 
-describe('ShareinfoCardComponent', () => {
-  let component: ShareinfoCardComponent;
-  let fixture: ComponentFixture<ShareinfoCardComponent>;
+describe('ShareinfoListComponent', () => {
+  let component: ShareinfoListComponent;
+  let fixture: ComponentFixture<ShareinfoListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShareinfoCardComponent ]
+      declarations: [ ShareinfoListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShareinfoCardComponent);
+    fixture = TestBed.createComponent(ShareinfoListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

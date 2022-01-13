@@ -1,15 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-interface Shareidid {
-  head: string;
-  object: string;
-  company: string;
-  id: string;
-  password: string;
-  reference: string;
-  fax: string;
-  url: string;
-}
+import { Shareid } from 'src/app/interfaces/Shareid.interface';
 
 @Component({
   selector: 'app-shareid-detail',
@@ -20,7 +10,7 @@ export class ShareidDetailComponent implements OnInit {
 
 
   @Input()
-  shareids: Shareidid ={
+  shareid: Shareid = {
     head: '',
     object: '',
     company: '',

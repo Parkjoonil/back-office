@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShareinfoComponent } from './shareinfo.component';
-import { ShareinfoCardComponent } from './shareinfo-card/shareinfo-card.component';
+import { ShareinfoListComponent } from './shareinfo-list/shareinfo-list.component';
+import { ShareinfoListMoreComponent } from './shareinfo-list/shareinfo-list-more/shareinfo-list-more.component';
 
 
 
 @NgModule({
   declarations: [
     ShareinfoComponent,
-    ShareinfoCardComponent
+    ShareinfoListComponent,
+    ShareinfoListMoreComponent,
   ],
   imports: [
     CommonModule

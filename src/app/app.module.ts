@@ -12,6 +12,7 @@ import { MenuDetailComponent } from './menu/menu-detail/menu-detail.component';
 import { ShareidModule } from './shareid/shareid.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareinfoModule } from './shareinfo/shareinfo.module';
+import { ShareinfoListComponent } from './shareinfo/shareinfo-list/shareinfo-list.component';
 
 
 @NgModule({
@@ -19,7 +20,6 @@ import { ShareinfoModule } from './shareinfo/shareinfo.module';
     AppComponent,
     MenuComponent,
     MenuDetailComponent,
-    
 
   ],
   imports: [

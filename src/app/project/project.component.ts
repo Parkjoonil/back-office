@@ -1,11 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Project {
-  name: string;
-  status: Status;
-  start_at?: Date;
-  end_at?: Date;
-}
+import { Project } from '../interfaces/Project.interface';
 
 type Status = '대기' | '중' | '완료';
 

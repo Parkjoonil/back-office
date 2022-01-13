@@ -1,7 +1,7 @@
 import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 import { Component, Input, OnInit } from '@angular/core';
 
-interface Shareidid {
+interface Shareid {
   head: string;
   object: string;
   company: string;
@@ -19,7 +19,7 @@ interface Shareidid {
 })
 export class ShareidComponent implements OnInit {
 
-  shareidids: Shareidid[] = [
+  shareids: Shareid[] = [
     {
       head: '스마트스토어',
       object: '스토어관리',
