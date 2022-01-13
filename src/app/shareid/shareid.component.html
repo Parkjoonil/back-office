@@ -24,7 +24,10 @@
         </div>
     </div>
     <!--<app-shareid-detail [shareid]="shareid" *ngFor="let shareid of shareidids"></app-shareid-detail> -->
-    <app-shareid-detail></app-shareid-detail>
+    <ng-container *ngFor="let shareid of shareidids" >
+        <app-shareid-detail [shareids]="shareid"></app-shareid-detail>
+    </ng-container>
+    
    
    
     
