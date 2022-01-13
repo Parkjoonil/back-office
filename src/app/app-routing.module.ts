@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProjectComponent } from './project/project.component';
-import { ScheduleComponent } from './schedule/schedule.component';
-import { ShareidComponent } from './shareid/shareid.component';
-import { ShareinfoComponent } from './shareinfo/shareinfo.component';
-import { ShareinfoModule } from './shareinfo/shareinfo.module';
-import { StreamingComponent } from './streaming/streaming.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { ScheduleComponent } from './pages/schedule/schedule.component';
+import { ShareidComponent } from './pages/shareid/shareid.component';
+import { ShareinfoComponent } from './pages/shareinfo/shareinfo.component';
+import { ShareinfoModule } from './pages/shareinfo/shareinfo.module';
+import { StreamingComponent } from './pages/streaming/streaming.component';
 
 const routes: Routes = [
   {

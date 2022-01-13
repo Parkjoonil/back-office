@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProjectComponent } from './project/project.component';
-import { ProjectModule } from './project/project.module';
-import { StreamingComponent } from './streaming/streaming.component';
-import { StreamingModule } from './streaming/streaming.module';
-import { MenuComponent } from './menu/menu.component';
-import { MenuDetailComponent } from './menu/menu-detail/menu-detail.component';
-import { ShareidModule } from './shareid/shareid.module';
+import { ProjectComponent } from './pages/project/project.component';
+import { ProjectModule } from './pages/project/project.module';
+import { StreamingComponent } from './pages/streaming/streaming.component';
+import { StreamingModule } from './pages/streaming/streaming.module';
+import { MenuComponent } from './pages/menu/menu.component';
+import { MenuDetailComponent } from './pages/menu/menu-detail/menu-detail.component';
+import { ShareidModule } from './pages/shareid/shareid.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ShareinfoModule } from './shareinfo/shareinfo.module';
-import { ShareinfoListComponent } from './shareinfo/shareinfo-list/shareinfo-list.component';
+import { ShareinfoModule } from './pages/shareinfo/shareinfo.module';
+import { ShareinfoListComponent } from './pages/shareinfo/shareinfo-list/shareinfo-list.component';
 
 
 @NgModule({

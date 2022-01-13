@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Shareinfo } from '../interfaces/Shareinfo.interface';
+import { Shareinfo } from 'src/app/interfaces/Shareinfo.interface';
 
 @Component({
   selector: 'app-shareinfo',

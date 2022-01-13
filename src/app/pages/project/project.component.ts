@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from '../interfaces/Project.interface';
+import { Project } from 'src/app/interfaces/Project.interface';
 
 type Status = '대기' | '중' | '완료';
 
