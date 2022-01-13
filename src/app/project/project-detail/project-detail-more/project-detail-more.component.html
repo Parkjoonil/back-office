@@ -1,6 +1,6 @@
-<div class="ml-3 flex justify-center items-start relative" (click)="isOpen=!isOpen">
-    <img src="assets/images/morerotate.png" alt="">
-    <div class="absolute mt-4 right-0 p-2 bg-white w-[123px] h-auto rounded-xl shadow-lg" *ngIf="isOpen">
+<div class="ml-3 flex justify-center items-start relative" (appOutsideClick)="isOpen=!$event" >
+    <img src="assets/images/morerotate.png" alt="">   
+    <div class="absolute mt-4 -right-10 p-2 bg-white w-[123px] h-auto rounded-xl shadow-lg" *ngIf="isOpen">
         <div class="p-1.5 flex justify-start items-center">
             <div class="flex items-center">
                 <img src="assets/images/pen.png" alt="">

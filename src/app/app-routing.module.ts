@@ -4,6 +4,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProjectComponent } from './project/project.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ShareidComponent } from './shareid/shareid.component';
+import { ShareinfoComponent } from './shareinfo/shareinfo.component';
+import { ShareinfoModule } from './shareinfo/shareinfo.module';
 import { StreamingComponent } from './streaming/streaming.component';
 
 const routes: Routes = [
@@ -30,6 +32,10 @@ const routes: Routes = [
   {
     path: 'shareid',
     component: ShareidComponent
+  },
+  {
+    path: 'shareinfo',
+    component: ShareinfoComponent
   }
 ];
 

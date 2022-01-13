@@ -10,6 +10,8 @@ import { StreamingModule } from './streaming/streaming.module';
 import { MenuComponent } from './menu/menu.component';
 import { MenuDetailComponent } from './menu/menu-detail/menu-detail.component';
 import { ShareidModule } from './shareid/shareid.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ShareinfoModule } from './shareinfo/shareinfo.module';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { ShareidModule } from './shareid/shareid.module';
     BrowserModule,
     AppRoutingModule,
     ShareidModule,
-    ProjectModule
+    ShareinfoModule,
+    ProjectModule,
+    BrowserAnimationsModule,
     
 
   ],

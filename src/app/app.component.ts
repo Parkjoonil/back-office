@@ -35,7 +35,7 @@ export class AppComponent {
         },
         {
           name: '공유 정보 관리',
-          url: 'streaming'
+          url: 'shareinfo'
         }]
     },
     {
@@ -52,7 +52,7 @@ export class AppComponent {
          },
          {
            name: '출석대장',
-           url: 'dashboard'
+           url: 'streaming'
          } 
         ]
     },
@@ -67,17 +67,18 @@ export class AppComponent {
       details: [
         {
           name: '직원관리',
-          url: ''
+          url: 'streaming'
         },
         {
           name: '팀 관리',
-          url: '',
+          url: 'dashboard',
         },
         {
           name: '직급관리',
-          url: ''
+          url: 'project'
         }
       ]
     }
   ]
 }
+
