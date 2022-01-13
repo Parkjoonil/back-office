@@ -3,7 +3,7 @@ import { Directive, ElementRef, HostListener, Output, EventEmitter } from '@angu
 @Directive({
   selector: '[appOutsideClick]'
 })
-export class OutsideClickDirective {
+export class OutsideClickDirectiveProject {
   @Output()
   appOutsideClick = new EventEmitter();
 
