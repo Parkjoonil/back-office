@@ -25,18 +25,9 @@ export class AppComponent {
 
   isOpen: boolean = false;
 
-  constructor(
-    private menuService: MenuService,
-  ) { }
+  constructor()  { }
 
-  ngOnInit(): void {
-    this.getMenus();
-  }
-
-  getMenus() {
-    this.menuService.getMenu().subscribe((menus) => {});
-
-  }
+  ngOnInit(): void {}
   
 }
 
