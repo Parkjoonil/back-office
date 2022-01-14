@@ -11,7 +11,7 @@ import { StreamingComponent } from './pages/streaming/streaming.component';
 const routes: Routes = [
   {
     path: '',
-    component: StreamingComponent
+    component: ProjectComponent
   },
   {
     path: 'streaming',

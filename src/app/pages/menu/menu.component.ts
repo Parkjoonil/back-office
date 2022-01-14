@@ -1,15 +1,7 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
+import { Menu } from 'src/app/interfaces/Menu.interface';
+import { MenuService } from 'src/app/providers/menu/menu.service';
 
-interface Menu {
-  name: string;
-  icon: string;
-  details: MenuDetail[];
-}
-
-interface MenuDetail {
-  name: string;
-  url: string;
-}
 
 @Component({
   selector: 'app-menu',
@@ -18,23 +10,26 @@ interface MenuDetail {
 })
 export class MenuComponent implements OnInit {
 
-  @Input()
-  menu: Menu = {
-    name: '',
-    details: [
-      {
-        name: '',
-        url: ''
-      }
-    ],
-    icon: '',
-  };
-
   isOpen: boolean = false;
 
-  constructor() { }
+  @Input()
+  menu: Menu[] = [
+
+  ];
+
+
+  constructor(
+    private menuService: MenuService,
+  ) { }
 
   ngOnInit(): void {
+    this.getMenus();
+  }
+
+  getMenus() {
+    this.menuService.getMenu().subscribe((menus) => {
+      this.menu = menus});
+
   }
 
 }
