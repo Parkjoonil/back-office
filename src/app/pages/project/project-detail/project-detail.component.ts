@@ -11,12 +11,7 @@ type Status = '대기' | '중' | '완료';
 export class ProjectDetailComponent implements OnInit {
 
   @Input()
-  projects: Project[] = [{
-    name: '',
-    status: '대기',
-    start_at: new Date(),
-    end_at: new Date()
-  }]
+  projects: Project[] = []
 
   constructor() { }
 

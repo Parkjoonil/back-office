@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from 'src/app/interfaces/Project.interface';
+import { ProjectService } from 'src/app/providers/project/project.service';
 
 type Status = '대기' | '중' | '완료';
 
@@ -10,44 +11,34 @@ type Status = '대기' | '중' | '완료';
 })
 export class ProjectComponent implements OnInit {
 
-  project_waits: Project[] = [
-    {
-      name: 'Lepisode 백오피스',
-      status: '대기'
-    },
-  ]
+  project_waits: Project[] = [];
   
-  project_ings: Project[] = [
-    {
-      name: 'whatday-운동수행 어플리케이션',
-      status: '중',
-      start_at: new Date()
-    },
-    {
-      name: 'LEPISODE 홈페이지',
-      status: '중',
-      start_at: new Date()
-    },
-    {
-      name: '포트폴리오 (2차제작)',
-      status: '중',
-      start_at: new Date()
-    },
-  ]
+  project_ings: Project[] = [];
   
-  project_completes: Project[] = [
-    {
-      name: '전남도청 조직도 앱',
-      status: '완료',
-      start_at: new Date(),
-      end_at: new Date()
-    },
-  ]
+  project_completes: Project[] = [];
 
-  constructor() { }
+  constructor(
+    private projectService: ProjectService,
+  ) { }
 
 
   ngOnInit(): void {
+    this.getProjects();
+  }
+
+  getProjects() {
+    this.projectService.getProject().subscribe((projects) => {
+      this.project_waits = projects.filter(project => {
+        return project.status === '대기'
+      });
+      this.project_ings = projects.filter(project => {
+        return project.status === '중'
+      });
+      this.project_completes = projects.filter(project => {
+        return project.status === '완료'
+      });
+    });
+
   }
   
 }
