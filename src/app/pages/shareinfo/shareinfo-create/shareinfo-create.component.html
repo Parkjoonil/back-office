@@ -1,0 +1,44 @@
+<div class="flex items-center fixed justify-center inset-0" *ngIf="isOpen">
+    <div class="bg-black/25 fixed inset-0 z-40" (click)="isOpen = false; closingModal();">
+    </div>
+    <div class="bg-white rounded-2xl w-[512px] p-6 space-y-8 z-50">
+        <div class="flex justify-between">
+            <div class="text-2xl font-bold">
+                공유 정보 추가
+            </div>
+            <div (click)="isOpen = false; closingModal();">
+                x
+            </div>
+        </div>
+        <div>
+            <div class="text-sm font-medium text-gray-500">
+                타입
+            </div>
+            <div class="mt-2">
+                <select [formControl]="type" class="w-full border-[1px] border-gray-300 rounded-2xl">
+                    <option value="사업자번호">사업자번호</option>
+                    <option value="팩스번호">팩스번호</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="text-sm font-medium text-gray-500">
+                정보명
+            </div>
+            <div class="mt-2">
+                <input id="name" type="text" class="w-full border-[1px] border-gray-300 rounded-2xl" [formControl]="name">
+            </div>
+        </div>
+        <div>
+            <div class="text-sm font-medium text-gray-500">
+                내용
+            </div>
+            <div class="mt-2">
+                <input id="information" type="text" class="w-full border-[1px] border-gray-300 rounded-2xl" [formControl]="information">
+            </div>
+        </div>
+        <div class="bg-primary hover:bg-indigo-600 flex items-center justify-center rounded-2xl text-white font-bold text-base py-[10px] cursor-pointer" (click)="createInfo()">
+            추가하기
+        </div>
+    </div>
+</div>

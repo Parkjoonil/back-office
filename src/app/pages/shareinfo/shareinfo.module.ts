@@ -4,6 +4,8 @@ import { ShareinfoComponent } from './shareinfo.component';
 import { ShareinfoListComponent } from './shareinfo-list/shareinfo-list.component';
 import { ShareinfoListMoreComponent } from './shareinfo-list/shareinfo-list-more/shareinfo-list-more.component';
 import { OutsideClickDirectiveShareinfo } from 'src/app/directives/outside-click.directiveshareinfo';
+import { ShareinfoCreateComponent } from './shareinfo-create/shareinfo-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,10 +13,12 @@ import { OutsideClickDirectiveShareinfo } from 'src/app/directives/outside-click
     ShareinfoComponent,
     ShareinfoListComponent,
     ShareinfoListMoreComponent,
-    OutsideClickDirectiveShareinfo
+    OutsideClickDirectiveShareinfo,
+    ShareinfoCreateComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ]
 })
 export class ShareinfoModule { }

@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div>
-                <app-shareinfo-list-more></app-shareinfo-list-more>
+                <app-shareinfo-list-more [id]="shareinfo.id" (refresh)="console($event)"></app-shareinfo-list-more>
             </div>
         </div>
     </div>

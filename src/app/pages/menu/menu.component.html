@@ -1,17 +1,16 @@
-<div *ngFor="let menudata of menu">
-  <div class="h-[56px] flex justify-between items-center cursor-pointer" (click)="isOpen = !isOpen">
+<div *ngFor="let menu of menus">
+  <div class="h-[56px] flex justify-between items-center cursor-pointer" (click)="clickMenu(menu.id)">
     <div class="flex justify-between items-center">
-      <img [src]="'assets/images/' + menudata.icon + '.png'" alt="">
+      <img [src]="'assets/images/' + menu.icon + '.png'" alt="">
       <div class="ml-3">
-        {{ menudata.name }}
+        {{ menu.name }}
       </div>
     </div>
     <div>
       <img src="assets/images/arrowdown_2.png" alt="">
     </div>
   </div>
-  <!-- 
   <ng-container *ngFor="let detail of menu.details">
-    <app-menu-detail [detail]="detail" *ngIf="isOpen"></app-menu-detail>
-  </ng-container> -->
+    <app-menu-detail [detail]="detail" [isOpen]="detail.isOpen"></app-menu-detail>
+  </ng-container>
 </div>

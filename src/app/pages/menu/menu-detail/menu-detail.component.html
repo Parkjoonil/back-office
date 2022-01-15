@@ -1,4 +1,4 @@
-<div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="detail.url">
+<div class="h-[56px] ml-1 flex items-center cursor-pointer" [routerLink]="detail.url" *ngIf="isOpen">
     <img src="assets/images/dot.png" alt="">
     <div class="ml-[18px]">
         {{ detail.name }}

@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IShareinfoDTO } from 'src/app/interfaces/dtos/shareinfo.dto';
 import { Shareinfo } from 'src/app/interfaces/Shareinfo.interface';
+import { ShareinfoService } from 'src/app/providers/shareinfo/shareinfo.service';
+
+type modalStatus = 'none' | 'create' | 'update' | 'delete';
 
 @Component({
   selector: 'app-shareinfo',
@@ -8,60 +12,24 @@ import { Shareinfo } from 'src/app/interfaces/Shareinfo.interface';
 })
 export class ShareinfoComponent implements OnInit {
 
-  shareinfo: Shareinfo[] = [
-    {
-      name: '팀 레피소드',
-      type: '사업자번호',
-      color: 'bg-indigo-400',
-      information: '02 5875103 8871'
-    },
-    {
-      name: '도란',
-      type: '사업자번호',
-      color: 'bg-indigo-400',
-      information: '02 5875103 8871'
-    },
-    {
-      name: '풍기원',
-      type: '사업자번호',
-      color: 'bg-indigo-400',
-      information: '02 5875103 8871'
-    },
-    {
-      name: 'Title',
-      type: '사업자번호',
-      color: 'bg-indigo-400',
-      information: '02 5875103 8871'
-    },
-    {
-      name: '광주은행',
-      type: '계좌번호',
-      color: 'bg-emerald-400',
-      information: '02 5875103 8871'
-    },
-    {
-      name: '농협',
-      type: '계좌번호',
-      color: 'bg-emerald-400',
-      information: '02 5875103 8871'
-    },
-    {
-      name: '팀 레피소드 FAX',
-      type: '팩스번호',
-      color: 'bg-violet-400',
-      information: '02 5875103 8871'
-    },
-    {
-      name: '도란',
-      type: '팩스번호',
-      color: 'bg-violet-400',
-      information: '02 5875103 8871'
-    }
-  ]
+  shareinfos: IShareinfoDTO.Response.Shareinfo[] = [];
 
-  constructor() { }
+  modalStatus: modalStatus = 'none';
+
+  constructor(
+    private shareinfoService: ShareinfoService,
+  ) { }
 
   ngOnInit(): void {
+    this.getShareinfos();
+  }
+
+  getShareinfos() {
+    setTimeout(() => {
+      this.shareinfoService.getShareinfo().subscribe((shareinfos) => {
+        this.shareinfos = shareinfos;
+      });
+    }, 50);
   }
 
 }

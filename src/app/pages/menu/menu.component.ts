@@ -9,14 +9,8 @@ import { MenuService } from 'src/app/providers/menu/menu.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-
-  isOpen: boolean = false;
-
   @Input()
-  menu: Menu[] = [
-
-  ];
-
+  menus: Menu[] = [];
 
   constructor(
     private menuService: MenuService,
@@ -28,8 +22,16 @@ export class MenuComponent implements OnInit {
 
   getMenus() {
     this.menuService.getMenu().subscribe((menus) => {
-      this.menu = menus});
-
+      this.menus = menus
+    });
   }
 
+  clickMenu(id: number) {
+    this.menus.find(menu => {
+      return menu.id === id
+    })?.details.forEach(detail => {
+      return detail.isOpen = !detail.isOpen
+    })
+    console.log(this.menus)
+  }
 }

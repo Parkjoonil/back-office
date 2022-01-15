@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Shareinfo } from 'src/app/interfaces/Shareinfo.interface';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { IShareinfoDTO } from 'src/app/interfaces/dtos/shareinfo.dto';
 
 
 @Component({
@@ -10,18 +10,18 @@ import { Shareinfo } from 'src/app/interfaces/Shareinfo.interface';
 export class ShareinfoListComponent implements OnInit {
 
   @Input()
-  shareinfos: Shareinfo[] = [
-    {
-      name: '',
-      information: '',
-      color: '',
-      type: '',
-    }
-  ]
+  shareinfos: IShareinfoDTO.Response.Shareinfo[] = [];
 
-  constructor() { }
+  @Output()
+  refresh = new EventEmitter<any>();
+
+  constructor(
+  ) { }
 
   ngOnInit(): void {
   }
 
+  console(e: any){
+    this.refresh.emit(e)
+  }
 }

@@ -13,6 +13,9 @@ interface MenuDetail {
 export class MenuDetailComponent implements OnInit {
 
   @Input()
+  isOpen: boolean = false;
+
+  @Input()
   detail: MenuDetail = {
     url: '',
     name: '',

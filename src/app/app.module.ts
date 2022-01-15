@@ -9,6 +9,7 @@ import { ProjectModule } from './pages/project/project.module';
 import { ShareidModule } from './pages/shareid/shareid.module';
 import { ShareinfoModule } from './pages/shareinfo/shareinfo.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     ShareinfoModule,
     ProjectModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
