@@ -15,6 +15,7 @@ export class ShareinfoComponent implements OnInit {
   shareinfos: IShareinfoDTO.Response.Shareinfo[] = [];
 
   modalStatus: modalStatus = 'none';
+  asd: string = '';
 
   constructor(
     private shareinfoService: ShareinfoService,
@@ -22,6 +23,7 @@ export class ShareinfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.getShareinfos();
+
   }
 
   getShareinfos() {
