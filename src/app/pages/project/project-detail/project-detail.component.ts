@@ -12,7 +12,10 @@ type Status = '대기' | '중' | '완료';
 export class ProjectDetailComponent implements OnInit {
 
   @Input()
-  projects: Project[] = []
+  projects: Project[] = [];
+
+  @Input()
+  status: Status = '대기';
 
   constructor(
     private projectService: ProjectService
