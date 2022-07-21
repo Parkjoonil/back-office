@@ -1,5 +1,5 @@
 import { Calendar } from "./Calendar.interface";
-import { EmployeeTeam } from "./EmployeeTeam.interface';
+import { EmployeeTeam } from "./EmployeeTeam.interface";
 
 export interface Employee {
     lastname: string;
