@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { cmsAnimations } from 'src/app/animations/animations';
 import * as dayjs from 'dayjs';
 import { ICalendarDTO } from 'src/app/interfaces/dtos/calendar.dto';
@@ -52,9 +52,11 @@ export class CalendarComponent implements OnInit {
     this.employeeService.getEmployees().subscribe((employees) => {
       this.listEmployee = employees;
       this.selectedUserName = this.listEmployee.find(employee => { return employee.id === this.selectedUserId })?.name;
-      this.getcalendarAttendance(dayjs().year(), dayjs().month() + 1);
+      this.getcalendarAttendance(dayjs().year(), dayjs().month() + 1); 
+      console.log(this.listEmployee);
     }); 
   }
+
 
   calendar(selectYear: number, selectMonth: number){
     this.selectedDaysInBeforeMonth = [];
