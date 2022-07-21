@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CalendarComponent } from './pages/calendar/calendar.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProjectComponent } from './pages/project/project.component';
 import { ScheduleComponent } from './pages/schedule/schedule.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'shareinfo',
     component: ShareinfoComponent
+  },
+  {
+    path: 'calendar',
+    component: CalendarComponent
   }
 ];
 
