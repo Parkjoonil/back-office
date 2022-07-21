@@ -16,4 +16,12 @@ export class ProjectDetailMoreComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onUpdate() {
+
+  }
+
+  onDelete() {
+    
+  }
+
 }

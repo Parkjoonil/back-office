@@ -10,6 +10,7 @@ import { ShareidModule } from './pages/shareid/shareid.module';
 import { ShareinfoModule } from './pages/shareinfo/shareinfo.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CalendarModule } from './pages/calendar/calendar.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ShareidModule,
     ShareinfoModule,
     ProjectModule,
+    CalendarModule,
     BrowserAnimationsModule,
     HttpClientModule,
   ],

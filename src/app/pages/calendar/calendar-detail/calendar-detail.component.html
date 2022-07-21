@@ -1,0 +1,52 @@
+<div class="flex items-center fixed justify-center inset-0" *ngIf="isOpen" @introFadeDetailInOutAnimation>
+    <div class="bg-black/25 fixed inset-0 z-40" (click)="isOpen = false; closingModal();">
+    </div>
+    <div class="bg-white rounded-2xl w-[288px] p-6 space-y-4 z-50">
+        <div class="flex justify-between">
+            <div class="text-2xl font-bold">
+                출석하기
+            </div>
+            <div (click)="isOpen = false; closingModal();" class="cursor-pointer">
+                <img src="assets/images/xbutton.png" alt="">
+            </div>
+        </div>
+        <div class="text-sm font-medium text-gray-500">
+            이름
+        </div>
+        <div>
+            <select id="employee" type="text" class="w-full border-[1px] border-gray-300 rounded-2xl" [formControl]="selectedId">
+                <option value="{{employee.id}}" *ngFor="let employee of employeeList"> {{ employee.name }}({{ employee.position }}, {{ employee.teamname }}) </option>
+            </select>
+        </div>
+        <div class="text-sm font-medium text-gray-500">
+            상태
+        </div>
+        <div>
+            <select id="status" type="text" class="w-full border-[1px] border-gray-300 rounded-2xl" [formControl]="attendanceStatus">
+                <option value="출석"> 출석 </option>
+                <option value="연차"> 연차 </option>
+                <option value="병가"> 병가 </option>
+            </select>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+            <div>
+                <div class="text-sm font-medium text-gray-500">
+                    사용 날짜
+                </div>
+                <div class="mt-4">
+                        <mat-form-field appearance="fill">
+                            <mat-label>사용 날짜</mat-label>
+                            <input matInput [matDatepicker]="startdate" [disabled]="attendanceStatus.value === '' || attendanceStatus.value === '출석'" readonly [formControl]="date">
+                            <mat-datepicker-toggle matSuffix [for]="startdate"></mat-datepicker-toggle>
+                            <mat-datepicker #startdate [disabled]="attendanceStatus.value === '' || attendanceStatus.value === '출석'"></mat-datepicker>
+                        </mat-form-field>
+                    
+                </div>
+            </div>       
+        </div>
+        <div class="bg-primary hover:bg-indigo-600 flex items-center justify-center rounded-2xl text-white font-bold text-base py-[10px] cursor-pointer" (click)="createCalendar()">
+            추가하기
+        </div>
+        
+    </div>
+</div>

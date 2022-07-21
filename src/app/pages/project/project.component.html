@@ -27,9 +27,9 @@
         
         </div>
     </div>
-    <app-project-detail [projects]="project_waits"> </app-project-detail>
-    <app-project-detail [projects]="project_ings"> </app-project-detail>
-    <app-project-detail [projects]="project_completes"> </app-project-detail>
+    <app-project-detail [projects]="project_waits" [status]="'대기'"> </app-project-detail>
+    <app-project-detail [projects]="project_ings" [status]="'중'"> </app-project-detail>
+    <app-project-detail [projects]="project_completes" [status]="'완료'"> </app-project-detail>
     
    
    
