@@ -51,10 +51,8 @@ export class CalendarComponent implements OnInit {
     this.calendar(dayjs().year(), dayjs().month());
     this.employeeService.getEmployees().subscribe((employees) => {
       this.listEmployee = employees;
-      console.log(employees)
       this.selectedUserName = this.listEmployee.find(employee => { return employee.id === this.selectedUserId })?.name;
       this.getcalendarAttendance(dayjs().year(), dayjs().month() + 1); 
-      console.log(this.listEmployee);
     }); 
   }
 
