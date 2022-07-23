@@ -53,7 +53,6 @@ export class CalendarComponent implements OnInit {
       this.listEmployee = employees;
       this.selectedUserName = this.listEmployee.find(employee => { return employee.id === this.selectedUserId })?.name;
       this.getcalendarAttendance(dayjs().year(), dayjs().month() + 1); 
-      console.log(this.listEmployee);
     }); 
   }
 
@@ -89,8 +88,9 @@ export class CalendarComponent implements OnInit {
   }
 
   getcalendarAttendance(selectYear: number, selectMonth: number) {   
-      this.checkdaystatus = [];
+      this.checkdaystatus = [];      
       this.calendarService.getSortCalendars(selectYear.toString(), `${selectMonth<10?'0':''}${selectMonth.toString()}`, this.selectedUserId).subscribe((calendars) => {
+        console.log(calendars);
         this.listAttendanceChecks = calendars.sort(function (a, b) {
           if(parseInt(a.date.substring(8,10)) > parseInt(b.date.substring(8,10))) return 1;
           else if(parseInt(a.date.substring(8,10)) < parseInt(b.date.substring(8,10))) return -1;
